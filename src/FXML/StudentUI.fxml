@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserController">
+   <children>
+      <SplitPane dividerPositions="0.3" layoutX="102.0" layoutY="92.0" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="600.0" prefWidth="1000.0" scaleShape="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minWidth="300.0">
+               <children>
+                  <VBox layoutY="200.0" prefHeight="30.0" prefWidth="296.0">
+                     <children>
+                        <Label fx:id="nameLbl" alignment="CENTER" layoutX="75.0" layoutY="193.0" prefHeight="30.0" prefWidth="295.0" styleClass="statusLbl" stylesheets="@style.css" text="-" textAlignment="CENTER" underline="true">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Button layoutX="61.0" layoutY="290.0" mnemonicParsing="false" onAction="#btnProfile" prefHeight="25.0" prefWidth="171.0" text="Profile" />
+                  <Button layoutX="61.0" layoutY="330.0" mnemonicParsing="false" onAction="#btnSetting" prefHeight="25.0" prefWidth="171.0" text="Setting" />
+                  <Button layoutX="61.0" layoutY="370.0" mnemonicParsing="false" onAction="#btnProgress" prefHeight="25.0" prefWidth="171.0" text="Progress" />
+                  <Button layoutX="61.0" layoutY="410.0" mnemonicParsing="false" onAction="#btnStatus" prefHeight="25.0" prefWidth="171.0" text="Status" />
+                  <Button layoutX="61.0" layoutY="450.0" mnemonicParsing="false" onAction="#btnPayment" prefHeight="25.0" prefWidth="171.0" text="Payment" />
+                  <VBox fx:id="ppArea" layoutX="22.0" layoutY="14.0" prefHeight="179.0" prefWidth="252.0" styleClass="profilepic" stylesheets="@style.css" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minWidth="700.0">
+               <children>
+                  <VBox fx:id="bannerContainer" layoutX="-10.0" layoutY="-7.0" prefHeight="252.0" prefWidth="710.0" styleClass="banner" stylesheets="@style.css" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
