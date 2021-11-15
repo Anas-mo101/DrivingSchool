@@ -48,8 +48,13 @@ public class UserController implements Initializable {
     }
 
     @FXML
-    void btnStatus(ActionEvent event) {
-
+    void btnStatus(ActionEvent event) throws IOException {
+        funcPane.getChildren().clear();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/StudentUI_status.fxml"));
+        Pane newLoadedPane = (Pane) loader.load();
+        funcPane.getChildren().add(newLoadedPane);
+        UserController_status user = loader.getController();
+        user.setUserdata(userData);
     }
 
     @FXML
