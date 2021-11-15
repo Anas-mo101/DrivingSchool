@@ -1,15 +1,21 @@
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
 public class UserController implements Initializable {
     private String[] userData;
     Csvreader csv = new Csvreader("users.csv");
 
+    @FXML
+    private Pane funcPane;
+    
     @FXML
     private VBox ppArea;
 
@@ -19,18 +25,31 @@ public class UserController implements Initializable {
     @FXML
     private VBox bannerContainer;
 
+    // ====================================
+
+
+    // ====================================
+
     @FXML
-    void btnProfile(ActionEvent event) {
-        
+    void btnProfile(ActionEvent event) throws IOException{
+        funcPane.getChildren().clear();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/StudentUI_profile.fxml"));
+        Pane newLoadedPane = (Pane) loader.load();
+        funcPane.getChildren().add(newLoadedPane);
+        UserController_profile user = loader.getController();
+        user.setUserdata(userData);
+        // namelbl.setText(userData[0]);
+    }
+
+    @FXML
+    void btnProgress(ActionEvent event) throws IOException{
+        funcPane.getChildren().clear();
+        Pane newLoadedPane = FXMLLoader.load(getClass().getResource("FXML/StudentUI_progress.fxml"));
+        funcPane.getChildren().add(newLoadedPane); 
     }
 
     @FXML
     void btnSetting(ActionEvent event) {
-
-    }
-
-    @FXML
-    void btnProgress(ActionEvent event) {
 
     }
 
