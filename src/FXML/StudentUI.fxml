@@ -23,17 +23,17 @@
                      </children>
                   </VBox>
                   <Button layoutX="61.0" layoutY="290.0" mnemonicParsing="false" onAction="#btnProfile" prefHeight="25.0" prefWidth="171.0" text="Profile" />
-                  <Button layoutX="61.0" layoutY="330.0" mnemonicParsing="false" onAction="#btnSetting" prefHeight="25.0" prefWidth="171.0" text="Setting" />
-                  <Button layoutX="61.0" layoutY="370.0" mnemonicParsing="false" onAction="#btnProgress" prefHeight="25.0" prefWidth="171.0" text="Progress" />
-                  <Button layoutX="61.0" layoutY="410.0" mnemonicParsing="false" onAction="#btnStatus" prefHeight="25.0" prefWidth="171.0" text="Status" />
-                  <Button layoutX="61.0" layoutY="450.0" mnemonicParsing="false" onAction="#btnPayment" prefHeight="25.0" prefWidth="171.0" text="Payment" />
+                  <Button layoutX="61.0" layoutY="332.0" mnemonicParsing="false" onAction="#btnProgress" prefHeight="25.0" prefWidth="171.0" text="Progress" />
+                  <Button layoutX="61.0" layoutY="372.0" mnemonicParsing="false" onAction="#btnStatus" prefHeight="25.0" prefWidth="171.0" text="Status" />
+                  <Button layoutX="61.0" layoutY="412.0" mnemonicParsing="false" onAction="#btnPayment" prefHeight="25.0" prefWidth="171.0" text="Payment" />
                   <VBox fx:id="ppArea" layoutX="22.0" layoutY="14.0" prefHeight="179.0" prefWidth="252.0" styleClass="profilepic" stylesheets="@style.css" />
+                  <Button layoutX="120.0" layoutY="538.0" mnemonicParsing="false" onAction="#signout" text="Sign out" />
                </children>
             </AnchorPane>
           <AnchorPane minWidth="700.0">
                <children>
                   <VBox prefHeight="252.0" prefWidth="710.0" styleClass="banner" stylesheets="@style.css" />
-                  <Pane fx:id="funcPane" layoutY="252.0" prefHeight="348.0" prefWidth="700.0" />
+                  <Pane fx:id="funcPane" layoutY="252.0" prefHeight="348.0" prefWidth="700.0" /> 
                </children>
             </AnchorPane>
         </items>
