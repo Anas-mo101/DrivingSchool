@@ -112,6 +112,16 @@ public class Csvreader{
         String[] items = UsersInfo.get(userline).split(",");
         return items[index];
     }
+    
+    /**
+     * Retrives all user data by the its line number
+     * @param userline Line (index) where user is located in list 
+     * @return String array containing all user data
+     */
+    public String[] GetUserData(int userline) { // finds user by line number and gets user data by index
+        String[] items = UsersInfo.get(userline).split(",");
+        return items;
+    }
 
     // /**
     //  * Finds user by ID and prints user's details 
