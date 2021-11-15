@@ -58,16 +58,13 @@ public class Csvreader{
         }
 
         switch(UserType){
-            case "student":  return true;
+            case "student":  
+            case "instructor": 
+            case "examiner":
+            case "agency": return true;
 
-        //     case "vcadmin": //AllMenus.VC(UserLocatedInLine);
-        //                     break;
-
-        //    case "recipient": //AllMenus.CustomerMenu(UserLocatedInLine);
-        //                     break;
-
-           default: return false;
-          }   
+            default: return false;
+        }  
     }
 
     /**
