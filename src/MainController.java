@@ -38,7 +38,7 @@ public class MainController {
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/StudentUI.fxml"));
                     root = (Parent) loader.load();
                     UserController user = loader.getController();
-                    user.setUsername(csv.GetUserData(USERNAME_INDEX, csv.getUserLineLocation()));
+                    user.setUseData(csv.GetUserData(csv.getUserLineLocation()));
                     break;
                 default:
                     break;
