@@ -48,17 +48,17 @@ public class UserController implements Initializable {
     }
 
     @FXML
-    void btnSetting(ActionEvent event) {
-
-    }
-
-    @FXML
     void btnStatus(ActionEvent event) {
 
     }
 
     @FXML
     void btnPayment(ActionEvent event) {
+
+    }
+    
+    @FXML
+    void signout(ActionEvent event) {
 
     }
 
