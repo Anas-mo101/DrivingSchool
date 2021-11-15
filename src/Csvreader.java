@@ -123,26 +123,22 @@ public class Csvreader{
         return items;
     }
 
-    // /**
-    //  * Finds user by ID and prints user's details 
-    //  * @param ID User ID
-    //  */
-    // public void GetUserInfoByID(String ID) { // gets all user info by ID
-    //     for (int i = 0; i < UsersInfo.size(); i++) {
-    //         String[] items = UsersInfo.get(i).split(",");
-    //         String id = items[ID_INDEX];
-    //         if (ID.equals(id)) {
-    //             System.out.println("User ID: " + ID);
-    //             System.out.println("Name: " + GetUserData(NAME_INDEX, i));
-    //             System.out.println("First Vaccine Status: " + GetUserData(FSTSTATUS_INDEX, i));
-    //             System.out.println("Second Vaccine Status: "+ GetUserData(SCNDSTATUS_INDEX, i));
-    //             System.out.println("First Appoinment: " + GetUserData(FIRSTVAC_INDEX, i));
-    //             System.out.println("Second Appoinment: " + GetUserData(SCNDVAC_INDEX, i));
-    //             System.out.println("Phone: " + GetUserData(PHONE_INDEX, i));
-    //             System.out.println("Assigned Vaccination center: " + GetUserData(VCASSIGNED_INDEX, i));
-    //         }
-    //     }
-    // }
+    /**
+     * Finds user by Username and returns user's details 
+     * @param Username Username
+     */
+    public String[] GetUserInfoByUsername(String Username) { // gets all user info by ID
+        String[] temp = {""};
+        for (int i = 0; i < UsersInfo.size(); i++) {
+            String[] items = UsersInfo.get(i).split(",");
+            String username = items[NAME_INDEX];
+            if (Username.equals(username)) {
+                temp = items;
+                return temp;
+            }
+        }
+        return temp; 
+    }
 
 
     // /**
