@@ -7,7 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 
 public class UserController implements Initializable {
-    // private String Username;
+    private String[] userData;
     Csvreader csv = new Csvreader("users.csv");
 
     @FXML
@@ -44,9 +44,9 @@ public class UserController implements Initializable {
 
     }
 
-    public void setUsername(String Username){
-        // this.Username = Username;
-        nameLbl.setText(Username);
+    public void setUseData(String[] userData){
+        this.userData = userData;
+        nameLbl.setText(userData[0]);
     }
 
     @Override
