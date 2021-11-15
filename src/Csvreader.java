@@ -18,14 +18,6 @@ public class Csvreader{
     private final int NAME_INDEX = 0;
     private final int PASS_INDEX = 1;
     private final int USERTYPE_INDEX = 2;
-
-    // private final int NAME_INDEX = 3;
-    // private final int FSTSTATUS_INDEX = 4;
-    // private final int SCNDSTATUS_INDEX = 5;
-    // private final int FIRSTVAC_INDEX = 6;
-    // private final int SCNDVAC_INDEX = 7;
-    // private final int PHONE_INDEX = 8;
-    // private final int VCASSIGNED_INDEX = 9;
     private String filename;
     
     Csvreader(String filename) {
