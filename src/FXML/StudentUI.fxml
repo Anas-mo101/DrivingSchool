@@ -32,7 +32,8 @@
             </AnchorPane>
           <AnchorPane minWidth="700.0">
                <children>
-                  <VBox fx:id="bannerContainer" layoutX="-10.0" layoutY="-7.0" prefHeight="252.0" prefWidth="710.0" styleClass="banner" stylesheets="@style.css" />
+                  <VBox prefHeight="252.0" prefWidth="710.0" styleClass="banner" stylesheets="@style.css" />
+                  <Pane fx:id="funcPane" layoutY="252.0" prefHeight="348.0" prefWidth="700.0" />
                </children>
             </AnchorPane>
         </items>
