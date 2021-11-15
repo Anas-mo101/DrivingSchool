@@ -25,10 +25,6 @@ public class UserController implements Initializable {
     @FXML
     private VBox bannerContainer;
 
-    // ====================================
-
-
-    // ====================================
 
     @FXML
     void btnProfile(ActionEvent event) throws IOException{
@@ -44,8 +40,11 @@ public class UserController implements Initializable {
     @FXML
     void btnProgress(ActionEvent event) throws IOException{
         funcPane.getChildren().clear();
-        Pane newLoadedPane = FXMLLoader.load(getClass().getResource("FXML/StudentUI_progress.fxml"));
-        funcPane.getChildren().add(newLoadedPane); 
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/StudentUI_progress.fxml"));
+        Pane newLoadedPane = (Pane) loader.load();
+        funcPane.getChildren().add(newLoadedPane);
+        UserController_progress user = loader.getController();
+        user.setUserdata(userData); 
     }
 
     @FXML
