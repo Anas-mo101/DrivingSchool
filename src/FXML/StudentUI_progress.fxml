@@ -37,7 +37,7 @@
       <Label fx:id="theoryhourleftLBL" layoutX="176.0" layoutY="250.0" text="-" />
       <Label fx:id="theoryhoursdoneLBL" layoutX="184.0" layoutY="282.0" text="-" />
       <Label fx:id="practicalhourleftLBL" layoutX="416.0" layoutY="250.0" text="-" />
-      <Label fx:id="practicalhoursleftLBL" layoutX="421.0" layoutY="282.0" text="-" />
+      <Label fx:id="practicalhoursdoneLBL" layoutX="421.0" layoutY="282.0" text="-" />
       <Label fx:id="theoryexamLBL" layoutX="558.0" layoutY="250.0" text="-" />
       <Label fx:id="practicalexamLBL" layoutX="569.0" layoutY="282.0" text="-" />
    </children>
