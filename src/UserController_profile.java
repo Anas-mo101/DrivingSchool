@@ -1,9 +1,8 @@
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.scene.layout.Pane;
 
 
-public class UserController_profile extends Pane {
+public class UserController_profile {
     Csvreader csv = new Csvreader("student.csv");
     private String[] userData; 
 
