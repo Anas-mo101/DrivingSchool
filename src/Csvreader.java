@@ -164,50 +164,50 @@ public class Csvreader{
         return "NOT FOUND";
     }
 
-    // /**
-    //  * Finds user by ID then edits/replace user's data 
-    //  * @param ID User ID
-    //  * @param Data New data to be added
-    //  * @param index Data field (attribute) number 
-    //  */
-    // public void setUserData(String ID, String Data, int index) { // searches for user by ID then sets specific data by index
-    //     int LineToBeEdited = 0;
-    //     String newLine = "";
-    //     String[] items;
+        /**
+     * Finds user by ID then edits/replace user's data 
+     * @param ID User ID
+     * @param Data New data to be added
+     * @param index Data field (attribute) number 
+     */
+    public void setUserData(String Data_, int index_, String Data, int index) { // searches for user by ID then sets specific data by index
+        int LineToBeEdited = 0;
+        String newLine = "";
+        String[] items;
 
-    //     for (int i = 0; i < UsersInfo.size(); i++) {
-    //         items = UsersInfo.get(i).split(",");
-    //         String id = items[ID_INDEX];
-    //         if (ID.equals(id)) {
-    //             LineToBeEdited = i;
-    //             items[index] = Data;
-    //             for (int x = 0; x < items.length; x++) {
-    //                 if (x == 0) {
-    //                     newLine += items[x];
-    //                 } else {
-    //                     newLine += "," + items[x];
-    //                 }
-    //             }
-    //             UsersInfo.remove(LineToBeEdited);
-    //             UsersInfo.add(LineToBeEdited, newLine);
-    //             break;
-    //         }
-    //     }
+        for (int i = 0; i < UsersInfo.size(); i++) {
+            items = UsersInfo.get(i).split(",");
+            String id = items[index_];
+            if (Data_.equals(id)) {
+                LineToBeEdited = i;
+                items[index] = Data;
+                for (int x = 0; x < items.length; x++) {
+                    if (x == 0) {
+                        newLine += items[x];
+                    } else {
+                        newLine += "," + items[x];
+                    }
+                }
+                UsersInfo.remove(LineToBeEdited);
+                UsersInfo.add(LineToBeEdited, newLine);
+                break;
+            }
+        }
 
-    //     try {
-    //         BufferedWriter writer = new BufferedWriter(new FileWriter("users.csv", false));
-    //         for (int i = 0; i < UsersInfo.size(); i++) {
-    //             if (i == 0) {
-    //                 writer.write(UsersInfo.get(i));
-    //             } else {
-    //                 writer.write('\n' + UsersInfo.get(i));
-    //             }
-    //         }
-    //         writer.close();
-    //     } catch (IOException ex) {
-    //         System.out.println("No file found.");
-    //     }
-    // }
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(filename, false));
+            for (int i = 0; i < UsersInfo.size(); i++) {
+                if (i == 0) {
+                    writer.write(UsersInfo.get(i));
+                } else {
+                    writer.write('\n' + UsersInfo.get(i));
+                }
+            }
+            writer.close();
+        } catch (IOException ex) {
+            System.out.println("No file found.");
+        }
+    }
     
     // /**
     //  * Edits/Replace data of multiple users 
