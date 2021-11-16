@@ -1,4 +1,6 @@
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,7 +12,7 @@ import javafx.stage.Stage;
 import javafx.scene.Node;
 
 
-public class MainController {
+public class MainController implements Initializable {
     private final int USERTYPE_INDEX = 2;
     private final int USERNAME_INDEX = 0;
     private final int PASS_INDEX = 1;
@@ -51,5 +53,13 @@ public class MainController {
         }else{
             statusLbl.setText("Login Failed");
         }
+    }
+    
+    
+     @Override
+    public void initialize(URL arg0, ResourceBundle arg1) {
+        // TODO Auto-generated method stub
+        usernameFeild.setPromptText("Username");
+        passwordFeild.setPromptText("Password");
     }
 }
