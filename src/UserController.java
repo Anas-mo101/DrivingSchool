@@ -61,9 +61,14 @@ public class UserController {
         user.setUserdata(userData);
     }
 
-    @FXML
-    void btnPayment(ActionEvent event) {
-
+     @FXML
+    void btnPayment(ActionEvent event) throws IOException{
+        funcPane.getChildren().clear();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/StudentUI_payment.fxml"));
+        Pane newLoadedPane = (Pane) loader.load();
+        funcPane.getChildren().add(newLoadedPane);
+        UserController_payments user = loader.getController();
+        user.setUserdata(userData);
     }
     
     @FXML
