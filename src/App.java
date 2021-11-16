@@ -15,7 +15,7 @@ public class App extends Application {
             root = FXMLLoader.load(getClass().getResource("FXML/MainUI.fxml"));
             Scene scene = new Scene(root);
             scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
-            primaryStage.setResizable(false);;
+            primaryStage.setResizable(false);
             primaryStage.setTitle("Driving School Sign In");
             primaryStage.setScene(scene);
             primaryStage.show();
