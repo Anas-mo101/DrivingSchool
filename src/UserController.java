@@ -13,7 +13,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage; 
 import javafx.scene.Node;
 
-public class UserController implements Initializable {
+public class UserController {
     private String[] userData;
     Csvreader csv = new Csvreader("users.csv");
 
@@ -82,10 +82,6 @@ public class UserController implements Initializable {
         nameLbl.setText(userData[0]);
     }
 
-    @Override
-    public void initialize(URL arg0, ResourceBundle arg1) {
-        
-    }
 }
 
 
