@@ -13,7 +13,7 @@ public class App extends Application {
      // Program runs from here
         Parent root;
         try {
-            root = FXMLLoader.load(getClass().getResource("FXML/MainUI.fxml"));    // loads the first FXML file to be veiwed 
+            root = FXMLLoader.load(getClass().getResource("FXML/MainUI.fxml"));    // loads the first FXML file to be veiwed, is controlled by MainController.java
             Scene scene = new Scene(root);
             scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
             primaryStage.setResizable(false);
