@@ -19,7 +19,7 @@ public class MainController implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
-    Csvreader csv = new Csvreader("users.csv");
+    Csvreader csv = new Csvreader("users.csv");         // loads the list of all users from csv file 
 
     @FXML
     private TextField passwordFeild;
@@ -33,15 +33,20 @@ public class MainController implements Initializable {
     @FXML
     void btnSignIn(ActionEvent event) throws IOException{
 
-        if(csv.CheckLoginDetails(usernameFeild.getText(),passwordFeild.getText())){
+        if(csv.CheckLoginDetails(usernameFeild.getText(),passwordFeild.getText())){         // csv login function check username and password are matching
             statusLbl.setText("Login Successfull");
-            switch (csv.GetUserData(USERTYPE_INDEX, csv.getUserLineLocation())){
-                case "student": 
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/StudentUI.fxml"));
+            switch (csv.GetUserData(USERTYPE_INDEX, csv.getUserLineLocation())){              // retrives user type after successfull login
+                case "student":                                                               // if user type is student it will run student interface
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/StudentUI.fxml"));          
                     root = (Parent) loader.load();
                     UserController user = loader.getController();
                     user.setUseData(csv.GetUserData(csv.getUserLineLocation()));
                     break;
+                    
+                case "instructor": break;               // add your interface according your user type like done above
+                case "examiner": break;
+                case "agency": break;
+                     
                 default:
                     break;
             }
@@ -54,12 +59,12 @@ public class MainController implements Initializable {
             statusLbl.setText("Login Failed");
         }
     }
-    
-    
+   
      @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         // TODO Auto-generated method stub
         usernameFeild.setPromptText("Username");
         passwordFeild.setPromptText("Password");
     }
+    
 }
