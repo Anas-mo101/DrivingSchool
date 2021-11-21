@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="funcPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="479.0" prefWidth="900.0" style="-fx-background-color: #5C4033;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InstructorController_ClassTimings">
+   <children>
+      <Pane layoutY="8.0" prefHeight="38.0" prefWidth="900.0" style="-fx-background-color: yellow;">
+         <children>
+            <Label fx:id="timingslbl" layoutX="14.0" layoutY="4.0" text="Class Timings">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Label layoutX="154.0" layoutY="85.0" prefHeight="33.0" prefWidth="221.0" text="Classes Schedule" textFill="#f8f6f6">
+         <font>
+            <Font name="Monotype Corsiva" size="30.0" />
+         </font>
+      </Label>
+      <Pane layoutX="59.0" layoutY="132.0" prefHeight="243.0" prefWidth="363.0" style="-fx-background-color: #cfee8e;">
+         <children>
+            <Separator layoutX="196.0" layoutY="1.0" orientation="VERTICAL" prefHeight="243.0" prefWidth="6.0" style="-fx-background-color: black;" />
+            <Separator layoutY="42.0" prefHeight="0.0" prefWidth="363.0" style="-fx-background-color: black;" />
+            <Text layoutX="232.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10-1pm">
+               <font>
+                  <Font name="Tahoma" size="21.0" />
+               </font></Text>
+            <Text layoutX="238.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8-10am">
+               <font>
+                  <Font name="Tahoma" size="21.0" />
+               </font></Text>
+            <Text layoutX="242.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3-5pm">
+               <font>
+                  <Font name="Tahoma" size="21.0" />
+               </font></Text>
+            <Text layoutX="242.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4-6pm">
+               <font>
+                  <Font name="Tahoma" size="21.0" />
+               </font></Text>
+            <Text layoutX="73.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Days">
+               <font>
+                  <Font name="Tahoma" size="24.0" />
+               </font>
+            </Text>
+            <Text layoutX="252.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time">
+               <font>
+                  <Font name="Tahoma" size="24.0" />
+               </font>
+            </Text>
+            <Text layoutX="63.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monday">
+               <font>
+                  <Font name="Tahoma" size="21.0" />
+               </font>
+            </Text>
+            <Text layoutX="46.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wednesday">
+               <font>
+                  <Font name="Tahoma" size="21.0" />
+               </font>
+            </Text>
+            <Text layoutX="68.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Friday">
+               <font>
+                  <Font name="Tahoma" size="21.0" />
+               </font>
+            </Text>
+            <Text layoutX="51.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saturday">
+               <font>
+                  <Font name="Tahoma" size="21.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Label layoutX="633.0" layoutY="87.0" text="Change Time" textFill="#f4f5f2">
+         <font>
+            <Font name="Monotype Corsiva" size="26.0" />
+         </font>
+      </Label>
+      <Pane layoutX="535.0" layoutY="132.0" prefHeight="243.0" prefWidth="312.0" style="-fx-background-color: #cfee8e;">
+         <children>
+            <TextField fx:id="PreferredTime" layoutX="30.0" layoutY="33.0" prefHeight="38.0" prefWidth="254.0" style="-fx-background-color: blue;" text="SELECT PREFERRED TIME">
+               <font>
+                  <Font name="Segoe UI Black" size="18.0" />
+               </font>
+            </TextField>
+            <ComboBox fx:id="comboBox" layoutX="53.0" layoutY="92.0" onAction="#selectPreferredTimeinfo" prefHeight="39.0" prefWidth="207.0" style="-fx-background-color: white;" />
+            <Button fx:id="submit" layoutX="131.0" layoutY="190.0" mnemonicParsing="false" onAction="#addInputtoComboBox" style="-fx-background-color: #69bfee;" text="Submit" textFill="#111111" />
+            <TextField fx:id="textinput" layoutX="74.0" layoutY="145.0" />
+         </children>
+      </Pane>
+      <Button layoutX="769.0" layoutY="410.0" mnemonicParsing="false" onAction="#signout" text="Sign out" />
+      <Button layoutX="288.0" layoutY="391.0" mnemonicParsing="false" text="Save" />
+      <Button layoutX="131.0" layoutY="391.0" mnemonicParsing="false" text="Change Time" />
+   </children>
+</Pane>
