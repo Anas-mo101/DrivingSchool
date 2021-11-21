@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="Func1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="348.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserController_profile">
+    <children>
+        <Text layoutX="247.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DRIVING TEST">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Text>
+     
+      <Label layoutX="458.0" layoutY="62.0" prefHeight="25.0" prefWidth="188.0" text="Upcoming Test Schedule..." />
+      <ImageView fitHeight="221.0" fitWidth="194.0" layoutX="14.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/drivingtest.png" />
+         </image></ImageView>
+      <DatePicker layoutX="232.0" layoutY="94.0" prefHeight="35.0" prefWidth="194.0" />
+      <AnchorPane layoutX="434.0" layoutY="94.0" prefHeight="230.0" prefWidth="237.0">
+         <children>
+            <ListView fx:id="TestSchedule" layoutX="13.0" layoutY="6.0" prefHeight="217.0" prefWidth="217.0" />
+         </children>
+      </AnchorPane>
+
+    </children>
+</Pane>

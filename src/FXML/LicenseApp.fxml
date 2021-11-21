@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="Func3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="348.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserController_profile">
+    <children>
+        <Text layoutX="205.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LICENSE APPROVAL">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Text>
+        <ListView fx:id="ListStud1" layoutX="106.0" layoutY="93.0" prefHeight="223.0" prefWidth="471.0" />
+        <Label layoutX="124.0" layoutY="69.0" prefHeight="24.0" prefWidth="265.0" text="List of students.." />
+        <ScrollBar layoutX="584.0" layoutY="93.0" orientation="VERTICAL" prefHeight="223.0" prefWidth="2.0" />
+      <Button layoutX="29.0" layoutY="154.0" mnemonicParsing="false" onAction="#btnUpdate" text="Update" />
+      <Button fx:id="signout1" layoutX="606.0" layoutY="181.0" mnemonicParsing="false" onAction="#signout1" prefHeight="35.0" prefWidth="80.0" text="Sign Out" textAlignment="RIGHT" />
+      <Button layoutX="32.0" layoutY="220.0" mnemonicParsing="false" onAction="#btnDelete" text="Delete" />
+
+    </children>
+</Pane>
