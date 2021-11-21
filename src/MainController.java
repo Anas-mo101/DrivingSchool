@@ -44,7 +44,13 @@ public class MainController implements Initializable {
                     user.setUseData(csv.GetUserData(csv.getUserLineLocation()));
                     break;
                     
-                case "instructor": break;               // add your interface according your user type like done above
+                case "instructor": 
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/InstructorUI.fxml"));          
+                    root = (Parent) loader.load();
+                    UserController user = loader.getController();
+                    user.setUseData(csv.GetUserData(csv.getUserLineLocation()));
+                    break;               // add your interface according your user type like done above
+                    
                 case "examiner": break;
                 case "agency": break;
                      
