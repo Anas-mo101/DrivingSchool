@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="Func2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="348.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UserController_profile">
+    <children>
+        <Text layoutX="270.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STUDENTS">
+            <font>
+                <Font size="30.0" />
+            </font>
+        </Text>
+        
+        <Label layoutX="194.0" layoutY="69.0" prefHeight="24.0" prefWidth="265.0" text="List of students.." />
+      <ScrollBar layoutX="664.0" layoutY="93.0" orientation="VERTICAL" prefHeight="223.0" prefWidth="17.0" />
+      <ImageView fitHeight="330.0" fitWidth="160.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/student.jpg" />
+         </image></ImageView>
+      <HBox fx:id="hbox" layoutX="203.0" layoutY="92.0" prefHeight="223.0" prefWidth="444.0">
+         <children>
+      
+              <ListView fx:id="listStudent" prefHeight="181.0" prefWidth="407.0" />
+         </children></HBox>
+
+    </children>
+</Pane>
