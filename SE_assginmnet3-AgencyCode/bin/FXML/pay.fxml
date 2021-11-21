@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="240.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Pay">
+   <children>
+      <Text layoutX="71.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pay Now">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Text layoutX="43.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="153.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MYR">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Label fx:id="amountlbl" layoutX="103.0" layoutY="56.0" text="-">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cardnum" layoutX="24.0" layoutY="113.0" prefHeight="25.0" prefWidth="193.0" promptText="CARD NO." />
+      <TextField fx:id="cvv" layoutX="25.0" layoutY="150.0" prefHeight="25.0" prefWidth="57.0" promptText="CVV" />
+      <TextField fx:id="exdate" layoutX="94.0" layoutY="150.0" prefHeight="25.0" prefWidth="123.0" promptText="EXPIRY DATE" />
+      <Button fx:id="Paybtn" layoutX="103.0" layoutY="192.0" mnemonicParsing="false" onAction="#paybtn" text="Pay" />
+      <VBox layoutX="-1.0" layoutY="87.0" prefHeight="17.0" prefWidth="240.0">
+         <children>
+            <Label fx:id="statuslbl" alignment="CENTER" layoutX="107.0" layoutY="87.0" prefHeight="17.0" prefWidth="242.0" styleClass="statusLbl" stylesheets="@../style.css" text="-" textAlignment="CENTER" textFill="RED" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

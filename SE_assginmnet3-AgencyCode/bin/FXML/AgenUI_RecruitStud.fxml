@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane layoutY="58.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="401.0" prefWidth="735.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AgenController_RecruitStud">
+   <children>
+      <TableView fx:id="tableview" prefHeight="401.0" prefWidth="735.0">
+        <columns>
+          <TableColumn fx:id="Studentlist" prefWidth="86.40002131462097" text="NO" />
+          <TableColumn fx:id="StudentName" prefWidth="346.00001525878906" text="NAME" />
+            <TableColumn fx:id="Date" prefWidth="174.79998779296875" text="Apply Date" />
+            <TableColumn fx:id="Approval" prefWidth="127.5999755859375" text="Approval" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>

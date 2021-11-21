@@ -1,0 +1,24 @@
+.body{
+    -fx-background-image: url("imgs/background.png");
+    -fx-background-repeat: no-repeat; 
+    -fx-background-size: 1000 600; 
+    -fx-background-position: center center; 
+}
+
+.statusLbl{
+    -fx-text-alignment: center;
+}
+
+.profilepic{
+    -fx-background-image: url("imgs/profilepic.png");
+    -fx-background-repeat: no-repeat; 
+    -fx-background-size: 252 179; 
+    -fx-background-position: center center; 
+}
+
+.banner{
+    -fx-background-image: url("imgs/Banner.png");
+    -fx-background-repeat: no-repeat; 
+    -fx-background-size: 720 252; 
+    -fx-background-position: center center; 
+}
