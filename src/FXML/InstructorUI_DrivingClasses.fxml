@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="funcPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="479.0" prefWidth="900.0" style="-fx-background-color: #5C4033;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InstructorController_DrivingClass">
+   <children>
+      <Pane layoutY="26.0" prefHeight="44.0" prefWidth="900.0" style="-fx-background-color: yellow;">
+         <children>
+            <Label fx:id="drivingclass" layoutX="14.0" layoutY="5.0" prefHeight="32.0" prefWidth="153.0" text="Driving Classes">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane layoutX="212.0" layoutY="97.0" prefHeight="343.0" prefWidth="463.0" style="-fx-background-color: #eee3aa;">
+         <children>
+            <Separator layoutY="40.0" prefHeight="3.0" prefWidth="460.0" style="-fx-background-color: black;" />
+            <Separator layoutX="273.0" layoutY="3.0" orientation="VERTICAL" prefHeight="343.0" prefWidth="5.0" style="-fx-background-color: black;" />
+            <Label fx:id="TypeOfLessons" layoutX="54.0" layoutY="9.0" text="Type of Lessons">
+               <font>
+                  <Font name="Constantia Bold" size="20.0" />
+               </font></Label>
+            <Label fx:id="Duration" layoutX="316.0" layoutY="9.0" text="Duration" textFill="#2b2b2a">
+               <font>
+                  <Font name="Constantia Bold" size="20.0" />
+               </font></Label>
+            <Label fx:id="SafetyDrivingTheoryLesson" layoutX="3.0" layoutY="59.0" text="Safety Driving Theory Lesson" textFill="#3212d0">
+               <font>
+                  <Font name="Georgia" size="20.0" />
+               </font></Label>
+            <Label fx:id="Onroadlesson" layoutX="69.0" layoutY="150.0" text="On road lesson" textFill="#3212d0">
+               <font>
+                  <Font name="Georgia" size="20.0" />
+               </font></Label>
+            <Label fx:id="Inclassdriving" layoutX="70.0" layoutY="209.0" text="In class driving" textFill="#3212d0">
+               <font>
+                  <Font name="Georgia" size="20.0" />
+               </font></Label>
+            <Label fx:id="Practicaltraining" layoutX="62.0" layoutY="262.0" text="Practical training" textFill="#3212d0">
+               <font>
+                  <Font name="Georgia" size="20.0" />
+               </font></Label>
+            <Label fx:id="RoadSafetySystem" layoutX="54.0" layoutY="305.0" text="(Road Safety System)" textFill="#3212d0">
+               <font>
+                  <Font name="Georgia" size="20.0" />
+               </font></Label>
+            <Label fx:id="value" layoutX="87.0" layoutY="84.0" text="(KPP01)" textFill="#1b25da">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="hours" layoutX="330.0" layoutY="71.0" text="6 hours" textFill="#3212d0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="hour" layoutX="330.0" layoutY="147.0" text="4 hours" textFill="#3212d0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="hrs" layoutX="330.0" layoutY="206.0" text="4 hours" textFill="#3212d0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="hr" layoutX="330.0" layoutY="273.0" text="2 hours" textFill="#3212d0">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Separator layoutY="131.0" prefHeight="3.0" prefWidth="460.0" style="-fx-background-color: black;" />
+            <Separator layoutX="3.0" layoutY="187.0" prefHeight="3.0" prefWidth="460.0" style="-fx-background-color: black;" />
+            <Separator layoutX="3.0" layoutY="245.0" prefHeight="3.0" prefWidth="460.0" style="-fx-background-color: black;" />
+         </children>
+      </Pane>
+      <Button layoutX="772.0" layoutY="411.0" mnemonicParsing="false" text="Sign Out" />
+   </children>
+</Pane>

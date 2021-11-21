@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0" prefWidth="900.0" style="-fx-background-color: #5C4033;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InstructorController_StudentDetails">
+   <children>
+      <Pane layoutY="14.0" prefHeight="45.0" prefWidth="900.0" style="-fx-background-color: yellow;">
+         <children>
+            <Label fx:id="studentlbl" layoutX="27.0" layoutY="8.0" text="Student">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Pane layoutX="193.0" layoutY="121.0" prefHeight="328.0" prefWidth="417.0" style="-fx-background-color: #fff7a0;">
+         <children>
+            <Separator layoutX="203.0" orientation="VERTICAL" prefHeight="331.0" prefWidth="6.0" style="-fx-background-color: black;" />
+            <Label fx:id="studentIDlbl" layoutX="242.0" layoutY="14.0" text="100018">
+               <font>
+                  <Font name="Constantia Bold" size="25.0" />
+               </font></Label>
+            <Label fx:id="Johnlbl" layoutX="251.0" layoutY="56.0" text="John">
+               <font>
+                  <Font name="Constantia Bold" size="21.0" />
+               </font></Label>
+            <Label fx:id="lNamelbl" layoutX="240.0" layoutY="98.0" text="Michael">
+               <font>
+                  <Font name="Constantia Bold" size="21.0" />
+               </font></Label>
+            <Label fx:id="DOBlbl" layoutX="236.0" layoutY="138.0" text="27.10.1998">
+               <font>
+                  <Font name="Constantia Bold" size="25.0" />
+               </font></Label>
+            <Label fx:id="genderlbl" layoutX="258.0" layoutY="178.0" text="Male">
+               <font>
+                  <Font name="Constantia Bold" size="21.0" />
+               </font></Label>
+            <Label fx:id="nationalitylbl" layoutX="240.0" layoutY="211.0" text="Malaysian">
+               <font>
+                  <Font name="Constantia Bold" size="21.0" />
+               </font></Label>
+            <Label fx:id="contactNumberlbl" layoutX="240.0" layoutY="248.0" text="012-5630981">
+               <font>
+                  <Font name="Constantia Bold" size="21.0" />
+               </font></Label>
+            <Label fx:id="emailAddlbl" layoutX="225.0" layoutY="283.0" text="johnM27@gmail.com">
+               <font>
+                  <Font name="Constantia Bold" size="19.0" />
+               </font></Label>
+            <Text layoutX="42.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Student ID">
+               <font>
+                  <Font name="Constantia Bold" size="21.0" />
+               </font></Text>
+            <Text layoutX="41.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name">
+               <font>
+                  <Font name="Constantia Bold" size="21.0" />
+               </font></Text>
+            <Text layoutX="45.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name">
+               <font>
+                  <Font size="21.0" />
+               </font></Text>
+            <Text layoutX="67.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DOB">
+               <font>
+                  <Font name="Constantia Bold" size="21.0" />
+               </font></Text>
+            <Text layoutX="59.0" layoutY="199.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender">
+               <font>
+                  <Font name="Constantia Bold" size="21.0" />
+               </font></Text>
+            <Text layoutX="37.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nationality">
+               <font>
+                  <Font name="Constantia Bold" size="21.0" />
+               </font></Text>
+            <Text layoutX="12.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Number">
+               <font>
+                  <Font name="Constantia Bold" size="21.0" />
+               </font></Text>
+            <Text layoutX="25.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email Address">
+               <font>
+                  <Font name="Constantia Bold" size="21.0" />
+               </font></Text>
+         </children></Pane>
+      <Label fx:id="StudentDetails" layoutX="294.0" layoutY="76.0" text="Student Details" textFill="#f5f4ec">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Button layoutX="765.0" layoutY="410.0" mnemonicParsing="false" text="Sign Out" />
+   </children>
+</Pane>
