@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.image.*?>
+
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -92,11 +92,6 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <Button layoutX="765.0" layoutY="410.0" mnemonicParsing="false" text="Sign Out" />
-      <ImageView fitHeight="188.0" fitWidth="216.0" layoutX="671.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../imgs/student%20details.jpg" />
-         </image>
-      </ImageView>
+     
    </children>
 </Pane>
