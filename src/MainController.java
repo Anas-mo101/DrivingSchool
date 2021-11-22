@@ -20,6 +20,7 @@ public class MainController implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
+    FXMLLoader loader;
     Csvreader csv = new Csvreader("users.csv");         // loads the list of all users from csv file 
 
     @FXML
@@ -38,33 +39,27 @@ public class MainController implements Initializable {
             statusLbl.setText("Login Successfull");
              switch (csv.GetUserData(USERTYPE_INDEX, csv.getUserLineLocation())){              // retrives user type after successfull login
                 case "student":                                                               // if user type is student it will run student interface
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/StudentUI.fxml"));          
+                    loader = new FXMLLoader(getClass().getResource("FXML/StudentUI.fxml"));          
                     root = (Parent) loader.load();
                     UserController user = loader.getController();
                     user.setUseData(csv.GetUserData(csv.getUserLineLocation()));
                     break;
                     
                 case "instructor": 
-                    FXMLLoader loaderI = new FXMLLoader(getClass().getResource("FXML/InstructorUI.fxml"));          
-                    root = (Parent) loaderI.load();
-                    UserController instructor = loaderI.getController();
-                    instructor.setUseData(csv.GetUserData(csv.getUserLineLocation()));
+                    loader = new FXMLLoader(getClass().getResource("FXML/InstructorUI.fxml"));          
+                    root = (Parent) loader.load();
                     break;               
                     
                 case "examiner":   
-                    FXMLLoader loaderE = new FXMLLoader(getClass().getResource("FXML/ExaminerUI.fxml"));
-                    root = (Parent) loaderE.load();
-                    ExController examiner = loaderE.getController();
-                    examiner.setUseData(csv.GetUserData(csv.getUserLineLocation()));
+                    loader = new FXMLLoader(getClass().getResource("FXML/ExaminerUI.fxml"));
+                    root = (Parent) loader.load();
                     break;
                     
                     
                 case "agency": 
-                    FXMLLoader loaderA = new FXMLLoader(getClass().getResource("FXML/AgenUI.fxml"));          
-                    root = (Parent) loaderA.load();
-                    UserController agency = loaderA.getController();
-                    agency.setUseData(csv.GetUserData(csv.getUserLineLocation()));
-                    break; 
+                    loader = new FXMLLoader(getClass().getResource("FXML/AgenUI.fxml"));          
+                    root = (Parent) loader.load();
+                    break;
                      
                 default:
                     break;
