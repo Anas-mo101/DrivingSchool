@@ -11,12 +11,23 @@
                 <Font size="30.0" />
             </font>
         </Text>
-        <ListView fx:id="ListStud1" layoutX="106.0" layoutY="93.0" prefHeight="223.0" prefWidth="471.0" />
         <Label layoutX="124.0" layoutY="69.0" prefHeight="24.0" prefWidth="265.0" text="List of students.." />
-        <ScrollBar layoutX="584.0" layoutY="93.0" orientation="VERTICAL" prefHeight="223.0" prefWidth="2.0" />
-      <Button layoutX="29.0" layoutY="154.0" mnemonicParsing="false" onAction="#btnUpdate" text="Update" />
-      <Button fx:id="signout1" layoutX="606.0" layoutY="181.0" mnemonicParsing="false" onAction="#signout1" prefHeight="35.0" prefWidth="80.0" text="Sign Out" textAlignment="RIGHT" />
-      <Button layoutX="32.0" layoutY="220.0" mnemonicParsing="false" onAction="#btnDelete" text="Delete" />
-
+        <ScrollBar layoutX="569.0" layoutY="98.0" orientation="VERTICAL" prefHeight="233.0" prefWidth="9.0" />
+      <Button layoutX="10.0" layoutY="154.0" mnemonicParsing="false" onAction="#btnUpdate" prefHeight="27.0" prefWidth="66.0" text="Update" />
+      <Button fx:id="signout1" layoutX="594.0" layoutY="181.0" mnemonicParsing="false" onAction="#signout1" prefHeight="48.0" prefWidth="98.0" text="Back to Main" textAlignment="RIGHT">
+         <font>
+            <Font size="11.0" />
+         </font></Button>
+      <Button layoutX="10.0" layoutY="220.0" mnemonicParsing="false" onAction="#btnDelete" prefHeight="27.0" prefWidth="66.0" text="Delete" />
+        <VBox fx:id="vbox1" layoutX="82.0" layoutY="98.0" prefHeight="233.0" prefWidth="487.0">
+            <children>
+                <TableView fx:id="licenseApp" prefHeight="239.0" prefWidth="487.0">
+                    <columns>
+                        <TableColumn fx:id="name" prefWidth="339.0" text="NAME" />
+                        <TableColumn fx:id="license" minWidth="0.0" prefWidth="129.0" text="LICENSE" />
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
     </children>
 </Pane>
