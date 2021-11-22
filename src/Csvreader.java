@@ -1,7 +1,9 @@
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+
 import java.io.BufferedWriter;
+
 import java.io.FileWriter;
 import java.util.List;
 
@@ -18,6 +20,14 @@ public class Csvreader{
     private final int NAME_INDEX = 0;
     private final int PASS_INDEX = 1;
     private final int USERTYPE_INDEX = 2;
+
+    // private final int NAME_INDEX = 3;
+    // private final int FSTSTATUS_INDEX = 4;
+    // private final int SCNDSTATUS_INDEX = 5;
+    // private final int FIRSTVAC_INDEX = 6;
+    // private final int SCNDVAC_INDEX = 7;
+    // private final int PHONE_INDEX = 8;
+    // private final int VCASSIGNED_INDEX = 9;
     private String filename;
     
     Csvreader(String filename) {
@@ -27,6 +37,7 @@ public class Csvreader{
 
     /**
      * Opens and loads data from csv file to list
+     * @param i
      */
     public void ReadFileLine() {
         try {
@@ -58,13 +69,15 @@ public class Csvreader{
         }
 
         switch(UserType){
-            case "student":  
-            case "instructor": 
-            case "examiner":
-            case "agency": return true;
+            case "student":  return true;
 
-            default: return false;
-        }  
+            case "agency":  return true;
+
+        //    case "recipient": //AllMenus.CustomerMenu(UserLocatedInLine);
+        //                     break;
+
+           default: return false;
+          }   
     }
 
     /**
@@ -91,6 +104,19 @@ public class Csvreader{
         }
     }
 
+    ///////////////////////////////////////////////////
+    /**
+     * Retrives user data by the its line number
+     * @param index Data field (attribute) number 
+     * @param userline Line (index) where user is located in list 
+     * @return String
+     */
+    public String GetUserData1(int index) { 
+        String[] items = UsersInfo.get(index).split(",");
+        return items[index];
+    }
+
+    ////////////////////////////////////////////////////////
     /**
      * Retrives user data by the its line number
      * @param index Data field (attribute) number 
@@ -101,6 +127,9 @@ public class Csvreader{
         String[] items = UsersInfo.get(userline).split(",");
         return items[index];
     }
+
+    //////////////////////////////////////////////
+
     
     /**
      * Retrives all user data by the its line number
@@ -257,11 +286,33 @@ public class Csvreader{
     //         System.out.println("No file found.");
     //     }
     // }
+/*
+    public String run(String name){
+        String csvFile = "Student.csv";
+        BufferedReader br = null;
+        String line = "";
+        String cvsSplitby = ",";
 
+        try {
+            br= new BufferedReader(new FileReader(csvFile));
+            while ((line = br.readLine()) != null){
+                String[] name = line.split(",");
+                System.out.print(name[0]);
+                return name;
 
-    /**
+            }
+    
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+            System.out.println("Missout");
+        
+    }
+*/
+    /** 
      * Gets list containing all users
-     * @return List<String>
+     * @return List<String
+     * 
      */
     public List<String> getUserInfo() { // return list containing all user data
         return UsersInfo;
@@ -367,12 +418,14 @@ public class Csvreader{
 
     /**
      * Print list of all user data in table form
+     * @return 
      */
-    public  void viewData() {              // To view every user's data in a list form                  // for MOH use
+    public  String viewData() {              // To view every user's data in a list form                  // for MOH use
         int ROW = getUserInfo().size();
         for (int i = 0; i<ROW; i++) {
             printList(i);
         }
+        return filename;
     }
     
 }
