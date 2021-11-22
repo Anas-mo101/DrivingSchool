@@ -1,43 +1,82 @@
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.ListView;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
-
-public class DrivingTestController implements Initializable {
-    ObservableList list= FXCollections.observableArrayList();
-
-    @FXML
-    private ListView<String> TestSchedule;
-
-    public DrivingTestController(ListView<String> TestSchedule) {
-        this.TestSchedule = TestSchedule;
+public class DrivingTestController extends Application {
+    public static void main(String[] args) {
+        launch(args);
     }
 
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        loadData();
-}
-private void loadData() {
+    public void start(Stage primaryStage) {
+
+        TableView testSchedule = new TableView();
+
+        TableColumn<Person, String> column1 = new TableColumn<>("TIMING");
+        column1.setCellValueFactory(new PropertyValueFactory<>("timing"));
 
 
-    list.removeAll(list);
-    String a=" 8am-10am [B2 license]";
-    String b=" 10am-12pm [D/DA license]";
-    String c=" 2pm-3pm [B Full license]";
-    String d=" 3pm-5pm [D/DA license]";
-    
-    list.addAll(a,b,c,d);
-    TestSchedule.getItems().addAll(list);
+        TableColumn<Person, String> column2 = new TableColumn<>("LICENSE TYPE");
+        column2.setCellValueFactory(new PropertyValueFactory<>("licensetype"));
+
+
+        testSchedule.getColumns().add(column1);
+        testSchedule.getColumns().add(column2);
+
+        testSchedule.getItems().add(new Person("8am-10am", "B2 License"));
+        testSchedule.getItems().add(new Person("10am-12pm", "D/DA License"));
+        testSchedule.getItems().add(new Person("12pm-1pm", "-"));
+        testSchedule.getItems().add(new Person("2pm-4pm", "B2 License"));
+        testSchedule.getItems().add(new Person("4pm-6pm", "D/DA License"));
+
+
+        VBox vbox = new VBox(testSchedule);
+
+        Scene scene = new Scene(vbox);
+
+        primaryStage.setScene(scene);
+
+        primaryStage.show();
 
     }
+
+    class Person {
+
+        private String timing = null;
+        private String licensetype = null;
+
+        public Person() {
+        }
+
+        public Person(String timing, String licensetype) {
+            this.timing = timing;
+            this.licensetype = licensetype;
+        }
+
+        public String getTiming() {
+            return timing;
+        }
+
+        public void setTiming(String firstName) {
+            this.timing = firstName;
+        }
+
+        public String getLicenseType() {
+            return licensetype;
+        }
+
+        public void setLicenseType(String lastName) {
+            this.licensetype = lastName;
+        }
+
+
+
 
     public void setUserdata(String[] examData) {
-    }
-}
+    }}}
