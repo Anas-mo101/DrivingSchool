@@ -47,9 +47,14 @@
                      </font>
                   </Label>
                   </children>
-            </Pane>
+                  </Pane>
             <Pane layoutX="490.0" layoutY="8.0" prefHeight="421.0" prefWidth="413.0" style="-fx-background-color: #dbe0e4;">
                <children>
+                  <Text layoutX="75.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DRIVE SAFELY!!!" wrappingWidth="330.45703125">
+                     <font>
+                        <Font name="Microsoft Himalaya" size="48.0" />
+                     </font>
+                  </Text>
                      <Text fill="#34861f" layoutX="9.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Practice with us and get the license on the first try">
                      <font>
                         <Font name="Wingdings" size="18.0" />
