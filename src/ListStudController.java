@@ -1,11 +1,11 @@
 
 
 import javafx.application.Application;
-
-
 import javafx.scene.Scene;
-import javafx.scene.control.ListView;
-import javafx.scene.layout.HBox;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 
@@ -13,42 +13,80 @@ import javafx.stage.Stage;
 
 public class ListStudController extends Application {
 
+    public static void main(String[] args) {
+        launch(args);
+    }
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
+
+        TableView listStud = new TableView();
+
+        TableColumn<DrivingTestController.Person, String> name = new TableColumn<>("NAME");
+        name.setCellValueFactory(new PropertyValueFactory<>("name"));
 
 
-        primaryStage.setTitle("List of Students");
+        TableColumn<ListStudController.Person, String> contactno = new TableColumn<>("CONTACT NO");
+        contactno.setCellValueFactory(new PropertyValueFactory<>("contactno"));
 
-        ListView listStudent = new ListView();
 
-        listStudent.getItems().add("Lee Ting Wei");
-        listStudent.getItems().add("Muhammad Adam Mukhriz");
-        listStudent.getItems().add("Siti Qaisara bt Md zul");
-        listStudent.getItems().add("Jazmine Sophea");
-        listStudent.getItems().add("Dhiviyaa A/P Kumar");
-        listStudent.getItems().add("Alya Maisarah bt Muazam");
-        listStudent.getItems().add("Jason Yap");
-        listStudent.getItems().add("Hariz Luqman");
-        listStudent.getItems().add("Syazwina Suhaimi");
-        listStudent.getItems().add("Muhammad Luqman Hakim ");
-        listStudent.getItems().add("Anthony Loke Rueben");
-        listStudent.getItems().add("Aliyah Sofiyah ");
-        listStudent.getItems().add("Abdul Khatab ");
-        listStudent.getItems().add("William Ong");
-        listStudent.getItems().add("Nor Ilyana Norzali");
-        listStudent.getItems().add("Muhammad Ghufran");
+        listStud.getColumns().add(name);
+        listStud.getColumns().add(contactno);
 
-        HBox hbox = new HBox(listStudent);
+        listStud.getItems().add(new ListStudController.Person("LEE TING WEI", "0189098988"));
+        listStud.getItems().add(new ListStudController.Person("MUHD LUQMAN HAKIM", "0198898088"));
+        listStud.getItems().add(new ListStudController.Person("ALYA QAISARA", "0126252202"));
+        listStud.getItems().add(new ListStudController.Person("NORILYANA NORZALI", "01154556766"));
+        listStud.getItems().add(new ListStudController.Person("MUHAMMAD GHUFRAN", "0198878687"));
+        listStud.getItems().add(new ListStudController.Person("REUBEN LUKE", "0132227879"));
+        listStud.getItems().add(new ListStudController.Person("AZHAR AHMAD ANUAR", "01134353677"));
+        listStud.getItems().add(new ListStudController.Person("SITI MAISARAH", "0118889798"));
+        listStud.getItems().add(new ListStudController.Person("SYAHNAZ MUHD AZHAN", "0198876768"));
+        listStud.getItems().add(new ListStudController.Person("MOHAMAD ABDUL KHATAB", "0134557575"));
 
-        Scene scene = new Scene(hbox, 300, 120);
+
+        VBox vbox = new VBox(listStud);
+
+        Scene scene = new Scene(vbox);
+
         primaryStage.setScene(scene);
+
         primaryStage.show();
-    }
-
-    public void setUserdata(String[] examData) {
 
     }
-}
 
+    class Person {
+
+        private String name = null;
+        private String contactno = null;
+
+        public Person() {
+        }
+
+        public Person(String name, String contactno) {
+            this.name = name;
+            this.contactno = contactno;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getContactno() {
+            return contactno;
+        }
+
+        public void setContactno(String contactno) {
+            this.contactno = contactno;
+        }
+
+
+        public void setUserdata(String[] examData) {
+
+        }
+    }}
 
