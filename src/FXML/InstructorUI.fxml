@@ -7,8 +7,6 @@
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
@@ -48,12 +46,7 @@
                         <Font name="Impact" size="30.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="256.0" fitWidth="477.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../imgs/insBackground.JPG" />
-                     </image>
-                  </ImageView>
-               </children>
+                  </children>
             </Pane>
             <Pane layoutX="490.0" layoutY="8.0" prefHeight="421.0" prefWidth="413.0" style="-fx-background-color: #dbe0e4;">
                <children>
@@ -77,11 +70,6 @@
                         <Font name="Yu Gothic UI Semibold" size="24.0" />
                      </font>
                   </Text>
-                  <ImageView fitHeight="161.0" fitWidth="188.0" layoutX="126.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../imgs/homepage.JPG" />
-                     </image>
-                  </ImageView>
                </children>
             </Pane>
             <Button fx:id="signout" layoutX="807.0" layoutY="453.0" mnemonicParsing="false" onAction="#signout" prefHeight="25.0" prefWidth="73.0" text="SignOut" />
