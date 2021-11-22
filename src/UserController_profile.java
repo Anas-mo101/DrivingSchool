@@ -45,23 +45,5 @@ public class UserController_profile {
         nationallbl.setText(userData[9]);
         licencetypelbl.setText(userData[10]); 
     }
-    
-  public TableView testSchedule;
-    public void btnUpdate(ActionEvent actionEvent) {
-    }
 
-    public void btnDelete(ActionEvent actionEvent) {
-    }
-
-    public void signout1(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/MainUI.fxml"));
-        Parent root = (Parent) loader.load();
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
-        stage.setScene(scene);
-        stage.show();
-    }
 }
-
-
