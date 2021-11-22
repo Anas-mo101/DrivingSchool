@@ -45,7 +45,8 @@ public class UserController_profile {
         nationallbl.setText(userData[9]);
         licencetypelbl.setText(userData[10]); 
     }
-
+    
+  public TableView testSchedule;
     public void btnUpdate(ActionEvent actionEvent) {
     }
 
