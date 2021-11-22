@@ -22,6 +22,11 @@
                   <Font name="System Bold Italic" size="20.0" />
                </font>
             </Label>
+            <ImageView fitHeight="39.0" fitWidth="152.0" layoutX="159.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imgs/class%20timings.JPG" />
+               </image>
+            </ImageView>
          </children></Pane>
       <Label layoutX="154.0" layoutY="85.0" prefHeight="33.0" prefWidth="221.0" text="Classes Schedule" textFill="#f8f6f6">
          <font>
