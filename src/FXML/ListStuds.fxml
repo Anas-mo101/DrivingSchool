@@ -14,16 +14,21 @@
         </Text>
         
         <Label layoutX="194.0" layoutY="69.0" prefHeight="24.0" prefWidth="265.0" text="List of students.." />
-      <ScrollBar layoutX="664.0" layoutY="93.0" orientation="VERTICAL" prefHeight="223.0" prefWidth="17.0" />
+      <ScrollBar layoutX="669.0" layoutY="93.0" orientation="VERTICAL" prefHeight="223.0" prefWidth="17.0" />
       <ImageView fitHeight="330.0" fitWidth="160.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../imgs/student.jpg" />
          </image></ImageView>
-      <HBox fx:id="hbox" layoutX="203.0" layoutY="92.0" prefHeight="223.0" prefWidth="444.0">
+      <VBox layoutX="194.0" layoutY="105.0">
          <children>
-      
-              <ListView fx:id="listStudent" prefHeight="181.0" prefWidth="407.0" />
-         </children></HBox>
+            <TableView fx:id="listStud" prefHeight="222.0" prefWidth="469.0">
+              <columns>
+                <TableColumn fx:id="name" prefWidth="339.0" text="NAME" />
+                <TableColumn fx:id="contactno" minWidth="0.0" prefWidth="129.0" text="CONTACT NO" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
 
     </children>
 </Pane>
