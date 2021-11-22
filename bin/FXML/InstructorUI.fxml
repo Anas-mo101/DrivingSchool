@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #5C4033;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InstructorHomeController">
+   <children>
+      <AnchorPane prefHeight="62.0" prefWidth="900.0" style="-fx-background-color: #5C4033;">
+         <children>
+            <Button fx:id="timings" layoutY="19.0" mnemonicParsing="false" onAction="#timings" prefHeight="39.0" prefWidth="216.0" style="-fx-background-color: yellow;" text="Class Timings">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="student" layoutX="228.0" layoutY="19.0" mnemonicParsing="false" onAction="#student" prefHeight="30.0" prefWidth="199.0" style="-fx-background-color: yellow;" text="Student">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="driving" layoutX="450.0" layoutY="19.0" mnemonicParsing="false" onAction="#driving" prefHeight="30.0" prefWidth="225.0" style="-fx-background-color: yellow;" text="Driving classes">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="training" layoutX="693.0" layoutY="19.0" mnemonicParsing="false" onAction="#training" prefHeight="39.0" prefWidth="199.0" style="-fx-background-color: yellow;" text="Training" textFill="#141413">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Pane fx:id="funcPane" layoutX="-14.0" layoutY="87.0" prefHeight="479.0" prefWidth="900.0" style="-fx-background-color: #5C4033;">
+         <children>
+            <Pane layoutX="14.0" layoutY="11.0" prefHeight="421.0" prefWidth="477.0" style="-fx-background-color: black;">
+               <children>
+                  <Label fx:id="instructorlbl" layoutX="14.0" layoutY="129.0" prefHeight="126.0" prefWidth="450.0" text="WELCOME TO INSTRUCTOR HOMEPAGE" textFill="#6bacdd">
+                     <font>
+                        <Font name="Impact" size="30.0" />
+                     </font>
+                  </Label>
+                  </children>
+            </Pane>
+            <Pane layoutX="490.0" layoutY="8.0" prefHeight="421.0" prefWidth="413.0" style="-fx-background-color: #dbe0e4;">
+               <children>
+                     <Text fill="#34861f" layoutX="9.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Practice with us and get the license on the first try">
+                     <font>
+                        <Font name="Wingdings" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#7e2fbf" layoutX="75.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Providing">
+                     <font>
+                        <Font name="Yu Gothic UI Semibold" size="24.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#e57863" layoutX="142.0" layoutY="314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HIGH QUALITY">
+                     <font>
+                        <Font name="Trebuchet MS" size="24.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#d066a0" layoutX="224.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Driver training" wrappingWidth="188.08984375">
+                     <font>
+                        <Font name="Yu Gothic UI Semibold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Button fx:id="signout" layoutX="807.0" layoutY="453.0" mnemonicParsing="false" onAction="#signout" prefHeight="25.0" prefWidth="73.0" text="SignOut" />
+         </children></Pane>
+   </children>
+</AnchorPane>
