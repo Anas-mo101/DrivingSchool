@@ -51,7 +51,11 @@ public class MainController implements Initializable {
                     user.setUseData(csv.GetUserData(csv.getUserLineLocation()));
                     break;               
                     
-                case "examiner": break;
+                case "examiner":   FXMLLoader loader2 = new FXMLLoader(getClass().getResource("FXML/ExaminerUI.fxml"));
+                    root = (Parent) loader2.load();
+                    ExController examiner = loader2.getController();
+                    examiner.setUseData(csv.GetUserData(csv.getUserLineLocation()));
+                    break;
                     
                     
                 case "agency": break;
