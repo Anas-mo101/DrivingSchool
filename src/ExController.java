@@ -43,8 +43,8 @@ public class ExController implements Initializable {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/DrivingTest.fxml"));
         Pane newLoadedPane = (Pane) loader.load();
         PaneFunc.getChildren().add(newLoadedPane);
-        DrivingTestController user = loader.getController();
-        user.setUserdata(examData);
+       // DrivingTestController user = loader.getController();
+      //  user.setUserdata(examData);
 
 
 
@@ -56,8 +56,8 @@ public class ExController implements Initializable {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/ListStuds.fxml"));
         Pane newLoadedPane = (Pane) loader.load();
         PaneFunc.getChildren().add(newLoadedPane);
-        ListStudController user = loader.getController();
-        user.setUserdata(examData);
+     //   ListStudController user = loader.getController();
+      //  user.setUserdata(examData);
 
 
     }
