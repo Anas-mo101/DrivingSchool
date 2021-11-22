@@ -52,13 +52,14 @@ public class MainController implements Initializable {
                     break;               
                     
                 case "examiner": break;
+                    
+                    
+                case "agency": break;
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/AgenUI.fxml"));          
                     root = (Parent) loader.load();
                     UserController user = loader.getController();
                     user.setUseData(csv.GetUserData(csv.getUserLineLocation()));
                     break; 
-                    
-                case "agency": break;
                      
                 default:
                     break;
