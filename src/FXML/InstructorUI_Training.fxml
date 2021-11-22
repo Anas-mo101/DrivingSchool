@@ -58,5 +58,10 @@
          </children>
       </Pane>
       <Button layoutX="761.0" layoutY="403.0" mnemonicParsing="false" text="Sign Out" />
+      <ImageView fitHeight="372.0" fitWidth="561.0" layoutX="14.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imgs/training.png" />
+         </image>
+      </ImageView>
    </children>
 </Pane>
